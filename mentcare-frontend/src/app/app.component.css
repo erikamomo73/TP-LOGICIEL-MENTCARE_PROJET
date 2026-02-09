@@ -1,0 +1,8 @@
+.layout{
+ display:flex;
+}
+
+.main{
+ flex:1;
+ background:#f4f7fb;
+}

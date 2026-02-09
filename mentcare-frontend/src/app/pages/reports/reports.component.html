@@ -1,0 +1,43 @@
+<div class="reports-page">
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <h1>📊 Analytics & Rapports MentCare</h1>
+
+    <p class="subtitle">
+      Analyse mensuelle pour aide à la décision gestionnaire
+    </p>
+
+  </div>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-grid">
+
+    <div class="kpi-card">
+      <h3>Patients Totaux</h3>
+      <p>{{stats?.total_patients}}</p>
+    </div>
+
+    <div class="kpi-card">
+      <h3>Consultations</h3>
+      <p>{{stats?.total_consultations}}</p>
+    </div>
+
+    <div class="kpi-card danger">
+      <h3>Patients à risque</h3>
+      <p>{{stats?.patients_risque}}</p>
+    </div>
+
+  </div>
+
+  <!-- GRAPH -->
+  <div class="chart-card">
+
+    <h2>📈 Evolution Mensuelle</h2>
+
+    <canvas id="analyticsChart"></canvas>
+
+  </div>
+
+</div>

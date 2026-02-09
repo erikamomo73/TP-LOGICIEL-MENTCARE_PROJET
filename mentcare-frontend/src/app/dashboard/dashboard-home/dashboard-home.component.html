@@ -1,0 +1,46 @@
+<h2 class="title">📊 Dashboard MentCare</h2>
+
+<div class="cards">
+
+  <div class="card">
+    <h3>Patients</h3>
+    <p>{{stats.total_patients}}</p>
+  </div>
+
+  <div class="card">
+    <h3>Consultations</h3>
+    <p>{{stats.total_consultations}}</p>
+  </div>
+
+  <div class="card">
+    <h3>Alertes</h3>
+    <p>{{stats.total_alertes}}</p>
+  </div>
+
+  <div class="card danger">
+    <h3>Patients à risque</h3>
+    <p>{{stats.patients_risque}}</p>
+  </div>
+
+</div>
+
+<!-- 🔥 GRAPH PRO -->
+<div class="chart-card">
+
+  <canvas id="statsChart"></canvas>
+
+</div>
+
+<h3>🚨 Patients récents</h3>
+
+<div class="table">
+
+  <div *ngFor="let p of recentPatients" class="row">
+
+    <span>{{p.nom}} {{p.prenom}}</span>
+
+    <span class="badge" *ngIf="p.risque">⚠️ Risque</span>
+
+  </div>
+
+</div>

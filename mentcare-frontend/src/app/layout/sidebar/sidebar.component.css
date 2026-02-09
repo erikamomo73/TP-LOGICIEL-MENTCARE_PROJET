@@ -1,0 +1,14 @@
+.sidebar{
+  width:220px;
+  height:100vh;
+  background:#0d47a1;
+  color:white;
+  padding:20px;
+}
+
+.sidebar a{
+  display:block;
+  margin:15px 0;
+  color:white;
+  text-decoration:none;
+}
