@@ -1,0 +1,41 @@
+<div class="page">
+
+<h1>📅 Consultations</h1>
+
+<div class="form">
+
+<input [(ngModel)]="newConsultation.patient" placeholder="ID Patient">
+
+<input [(ngModel)]="newConsultation.medecin" placeholder="Médecin">
+
+<input [(ngModel)]="newConsultation.notes" placeholder="Notes">
+
+<select [(ngModel)]="newConsultation.statut">
+
+<option value="suivi">Suivi</option>
+<option value="urgence">Urgence</option>
+<option value="termine">Terminé</option>
+
+</select>
+
+<button (click)="add()">Ajouter consultation</button>
+
+</div>
+
+<div class="cards">
+
+<div class="card" *ngFor="let c of consultations">
+
+<h3>Patient {{c.patient}}</h3>
+
+<p>Médecin: {{c.medecin}}</p>
+
+<p>{{c.notes}}</p>
+
+<p>Status: {{c.statut}}</p>
+
+</div>
+
+</div>
+
+</div>

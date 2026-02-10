@@ -1,0 +1,75 @@
+.page{
+ padding:30px;
+ background:#f4f6f9;
+ min-height:100vh;
+}
+
+.form{
+ background:white;
+ padding:20px;
+ border-radius:12px;
+ margin-bottom:20px;
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:10px;
+}
+
+input{
+ padding:10px;
+ border-radius:6px;
+ border:1px solid #ddd;
+}
+
+button{
+ background:#1976d2;
+ color:white;
+ border:none;
+ padding:10px;
+ border-radius:6px;
+}
+
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+ gap:20px;
+}
+
+.card{
+ background:white;
+ padding:20px;
+ border-radius:12px;
+ box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.actions{
+ display:flex;
+ gap:10px;
+ margin-top:10px;
+}
+
+.view{
+ background:#2196f3;
+}
+
+.delete{
+ background:#e53935;
+}
+
+.risk{
+ margin-top:8px;
+ font-weight:bold;
+}
+
+.risk-danger{
+ color:#e53935;
+ background:#fdecea;
+ padding:4px 8px;
+ border-radius:6px;
+}
+
+.risk-ok{
+ color:#2e7d32;
+ background:#e8f5e9;
+ padding:4px 8px;
+ border-radius:6px;
+}

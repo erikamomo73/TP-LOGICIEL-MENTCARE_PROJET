@@ -1,0 +1,58 @@
+<div class="page">
+
+<h1>🧠 MentCare - Patients</h1>
+
+<div class="form">
+
+<input [(ngModel)]="newPatient.nom" placeholder="Nom">
+<input [(ngModel)]="newPatient.prenom" placeholder="Prénom">
+<input [(ngModel)]="newPatient.age" placeholder="Age">
+<input [(ngModel)]="newPatient.sexe" placeholder="Sexe">
+<input [(ngModel)]="newPatient.telephone" placeholder="Téléphone">
+<input [(ngModel)]="newPatient.adresse" placeholder="Adresse">
+<input [(ngModel)]="newPatient.diagnostic" placeholder="Diagnostic">
+
+<label>
+<input type="checkbox" [(ngModel)]="newPatient.risque">
+ Patient à risque
+</label>
+
+<button (click)="add()">Ajouter</button>
+
+</div>
+
+<div class="cards">
+
+<div class="card" *ngFor="let p of patients">
+
+<h3>{{p.nom}} {{p.prenom}}</h3>
+
+<p>Age : {{p.age}}</p>
+<p>Diagnostic : {{p.diagnostic}}</p>
+
+<!-- ⭐ RISQUE AJOUTÉ -->
+<p class="risk">
+
+<span *ngIf="p.risque" class="risk-danger">
+⚠️ Patient à risque
+</span>
+
+<span *ngIf="!p.risque" class="risk-ok">
+✅ Stable
+</span>
+
+</p>
+
+<div class="actions">
+
+<button class="view" (click)="dossier(p.id)">Dossier</button>
+
+<button class="delete" (click)="delete(p.id)">Supprimer</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>

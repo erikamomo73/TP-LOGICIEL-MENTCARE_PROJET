@@ -1,0 +1,25 @@
+<div class="detail" *ngIf="patient">
+
+<h1>Dossier Patient</h1>
+
+<div class="card">
+
+<p><b>Nom:</b> {{patient.nom}}</p>
+<p><b>Prénom:</b> {{patient.prenom}}</p>
+<p><b>Age:</b> {{patient.age}}</p>
+<p><b>Sexe:</b> {{patient.sexe}}</p>
+<p><b>Téléphone:</b> {{patient.telephone}}</p>
+<p><b>Adresse:</b> {{patient.adresse}}</p>
+<p><b>Diagnostic:</b> {{patient.diagnostic}}</p>
+
+</div>
+
+</div>
+
+<p>
+<b>Risque :</b>
+
+<span *ngIf="patient.risque">⚠️ Patient à risque</span>
+<span *ngIf="!patient.risque">✅ Stable</span>
+
+</p>
